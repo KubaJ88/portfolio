@@ -1,0 +1,94 @@
+@import "../../styles/main.scss";
+
+.photo {
+    // background-color: grey;
+    grid-column: 1/5;
+    margin: 10.2rem 8.8rem 19.4rem 8.8rem;
+
+
+    &__portfolio {
+        // width: 78.4rem;
+        // height: 78.4rem; 
+        // overflow: hidden;
+        // margin: 10.2rem 8.8rem 19.4rem 8.8rem;
+        position: relative;
+        
+        
+
+
+        &__img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 1000px;   
+                 
+        }
+
+
+        &__circle { 
+            position: absolute;
+            
+
+            &--1 {
+            top: 1rem;
+            left: 2rem;
+            height:20%;
+            width: 20%;
+            // background-color: pink;
+            border: 3px solid $primary;
+            border-radius: 1000px;
+
+            }
+            &--2 {
+            bottom: 5rem;
+            right: 8rem;
+            height:10%;
+            width: 10%;
+            // background-color: pink;
+            border: 3px solid $primary;
+            border-radius: 50%;
+
+            }
+            &--3 {
+            bottom: 1rem;
+            left: 2rem;
+           
+
+            svg.triangle-icon  {
+                height:15%;
+                width: 15%;
+                fill: none; 
+                stroke: $primary;               
+               
+
+            }
+         
+
+            }
+            &--4 {
+            top: 5rem;
+            right: 5rem;
+            height:8%;
+            width: 8%;
+            
+
+            svg.triangle-icon  {
+                height: 5rem;
+                width: 5rem;
+                fill: none; 
+                stroke: $primary;               
+               
+
+            }
+                       
+
+            }
+        }
+    }
+   
+
+
+
+
+}
+
