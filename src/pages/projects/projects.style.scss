@@ -1,0 +1,25 @@
+@import "../../styles/main.scss";
+
+
+.project__list {
+    grid-row: 1;
+    grid-column: 1/-1;
+    grid-template-columns: inherit;
+    grid-template-rows: inherit;
+    display: grid;
+    background-color: $background;
+    z-index: 2;
+    height: 100vh;
+    // position: relative;
+}
+
+.background{
+    grid-row: 1;
+    grid-column: 1/-1;
+    grid-template-columns: inherit;
+    display: grid;
+    background-color: $third;
+    z-index: -1;
+}
+
+

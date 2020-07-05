@@ -1,9 +1,10 @@
 @import "../../styles/main.scss";
 
 .photo {
-    // background-color: grey;
+    // background-color: grey;      
     grid-column: 1/5;
-    margin: 10.2rem 8.8rem 19.4rem 8.8rem;
+    margin: 10.2rem 8.8rem auto 8.8rem;
+    grid-row: 1;
 
 
     &__portfolio {
@@ -45,20 +46,22 @@
             height:10%;
             width: 10%;
             // background-color: pink;
-            border: 3px solid $primary;
+            border: 3px solid $secondary;
             border-radius: 50%;
 
             }
             &--3 {
             bottom: 1rem;
-            left: 2rem;
+            left: 2rem;            
+            height: 10%;
+            width: 10%;
            
 
             svg.triangle-icon  {
-                height:15%;
-                width: 15%;
+                height:100%;
+                width: 100%;
                 fill: none; 
-                stroke: $primary;               
+                stroke: $third;               
                
 
             }

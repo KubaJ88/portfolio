@@ -3,12 +3,14 @@ import './styles/main.scss';
 import Photo from './components/photo/photo.component';
 import Profile from './components/profile/profile.component';
 import Header from './components/header/header.component';
+import HomePage from './pages/home/home.page';
+import Project from './pages/projects/projects.page';
 
 function App() {
   return (
     <div className="container">   
-    <Photo/>
-    <Profile/>
+    <HomePage/>
+    <Project/>
     </div>
   );
 }

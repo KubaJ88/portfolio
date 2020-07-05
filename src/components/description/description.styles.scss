@@ -1,0 +1,89 @@
+@import "../../styles/main.scss";
+
+
+
+
+.desc {
+    grid-column: 5/-1;
+    grid-row: 1;
+    // background-color: seagreen;
+    margin: 12.8rem 8.8rem auto 0;
+    // background-color: $third;
+    position: relative;
+    
+
+    .reveal {
+        width: 100%;
+        background: $background;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        
+    }
+
+    &__photo { 
+        height: 52rem;
+        width: 100%;
+        // background-image: url('../../img/projects/1.png');
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        object-fit: cover;
+        
+        
+        animation: cameraPan 10s infinite;
+    }
+
+    &__title { 
+        font-size: 7.2rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        background-color: $third;
+        margin-left: -11.2rem;
+        transform: translateY(-5rem);
+        display: inline-block;
+        border-radius: 5px;
+        mix-blend-mode: screen;
+        // color: ;
+       
+        
+        
+        
+        // letter-spacing: -0.5rem;
+        
+        h1 {
+            font-size: 7.2rem;
+            // mix-blend-mode: overlay;
+            // color: transparent;
+            text-shadow: black;
+     
+        // color: transparent;
+        }
+        
+    }
+
+    &__details { 
+        font-size: 3.6rem;
+        font-weight: 300;
+        
+    }
+}
+
+@keyframes cameraPan {
+    0% {
+      object-position: 0% 0%;
+    }    
+    25% {
+        object-position: 100% 50%;
+    }
+    50% {
+        object-position: 50% 50%;
+    }
+    75% {
+        object-position: 50% 100%;
+    }
+    100% {
+        object-position: 0% 0%;
+    }
+    
+    }

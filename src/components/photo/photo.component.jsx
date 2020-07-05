@@ -68,9 +68,18 @@ const Photo = () => {
         transition={{duration:10, loop:Infinity, ease:ease}}
         
         className="photo__portfolio__circle photo__portfolio__circle--2"></motion.div>
-        <div className="photo__portfolio__circle photo__portfolio__circle--3">
+        <motion.div className="photo__portfolio__circle photo__portfolio__circle--3"
+        animate={{
+          x: [10, 20, 50, 80, 100],
+          rotate: [0, 0, 90, 90, 0],
+          y: [-10, -20, -50, -80, -100],
+          
+      }}
+
+      transition={{duration:10, yoyo:Infinity, ease:ease}}
+        >
         <Triangle className='triangle-icon'/>
-        </div>
+        </motion.div>
         <motion.div 
          initial={{x:0}}
          animate={{x: '-5rem', y: '-3rem'}}

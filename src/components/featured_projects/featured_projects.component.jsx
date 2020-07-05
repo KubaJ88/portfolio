@@ -68,9 +68,11 @@ const FeaturedProjects = () => {
                     </div>
                     <div className="project__icons">
                         <motion.div
-                        whileHover={{scale:1.05}}
-                        className="icon"><Planet/></motion.div>
-                        <div className="icon"><Git/></div>
+                        whileHover={{scale:1.1, color: '#ffd700'}}
+                        className="icon"><Planet alt='planet'/></motion.div>
+                        <motion.div className="icon"
+                        whileHover={{scale:1.1, fill: '#ffd700'}}
+                        ><Git/></motion.div>
                         <div className="icon"><Star/></div>
                     </div>
                 </motion.div>

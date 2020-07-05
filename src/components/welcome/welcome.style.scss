@@ -73,7 +73,7 @@
             transition: all 0.5s ease-in-out;
 
             &:hover {
-                box-shadow: 0 0 6rem rgba($background, 0.5);
+                box-shadow: 0 0 1rem rgba($primary, 0.5);
                 transform: scale(1.02);
                 background-color: lighten($primary, $amount: 10);
             }
@@ -84,7 +84,8 @@
             // padding: 5rem 20rem;
             height: 4.8rem;
             width: 20rem;
-            background-color: #012428;
+            // background-color: $primary-dark;
+            border: .4rem solid $primary-dark;
             border-radius: 5px;
             // padding: 2rem 7rem;
             color: $primary;
@@ -94,7 +95,7 @@
             &:hover {
                 box-shadow: 0 0 6rem rgba($background, 0.2);
                 transform: scale(1.02);
-                background-color: lighten(#012428, $amount: 2);
+                background-color: lighten($primary-dark, $amount: 2);
             }
         }
     }
