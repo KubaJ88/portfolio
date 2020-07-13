@@ -3,16 +3,17 @@
 .photo {
     // background-color: grey;      
     grid-column: 1/5;
-    margin: 10.2rem 8.8rem auto 8.8rem;
+    margin: 5.0rem 8.8rem auto 8.8rem;
     grid-row: 1;
+    position: relative;
 
 
     &__portfolio {
-        // width: 78.4rem;
-        // height: 78.4rem; 
+        max-width: 78.4rem;
+        max-height: 78.4rem; 
         // overflow: hidden;
         // margin: 10.2rem 8.8rem 19.4rem 8.8rem;
-        position: relative;
+        // position: relative;
         
         
 
@@ -20,8 +21,9 @@
         &__img {
             height: 100%;
             width: 100%;
-            object-fit: cover;
-            border-radius: 1000px;   
+            object-fit: contain;
+            border-radius: 50%;   
+            // animation: cameraPan 10s linear infinite;
                  
         }
 
@@ -33,18 +35,18 @@
             &--1 {
             top: 1rem;
             left: 2rem;
-            height:20%;
-            width: 20%;
+            height:15rem;
+            width: 15rem;
             // background-color: pink;
             border: 3px solid $primary;
-            border-radius: 1000px;
+            border-radius: 50%;
 
             }
             &--2 {
             bottom: 5rem;
             right: 8rem;
-            height:10%;
-            width: 10%;
+            height:10rem;
+            width: 10rem;
             // background-color: pink;
             border: 3px solid $secondary;
             border-radius: 50%;
@@ -53,8 +55,8 @@
             &--3 {
             bottom: 1rem;
             left: 2rem;            
-            height: 10%;
-            width: 10%;
+            height: 10rem;
+            width: 10rem;
            
 
             svg.triangle-icon  {
@@ -71,8 +73,8 @@
             &--4 {
             top: 5rem;
             right: 5rem;
-            height:8%;
-            width: 8%;
+            height:8rem;
+            width: 8rem;
             
 
             svg.triangle-icon  {
@@ -95,3 +97,21 @@
 
 }
 
+@keyframes cameraPan {
+    0% {
+      object-position: 0% 0%;
+    }    
+    25% {
+        object-position: 100% 50%;
+    }
+    50% {
+        object-position: 50% 50%;
+    }
+    75% {
+        object-position: 50% 100%;
+    }
+    100% {
+        object-position: 0% 0%;
+    }
+    
+    }

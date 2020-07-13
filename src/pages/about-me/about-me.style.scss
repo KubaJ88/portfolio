@@ -1,0 +1,38 @@
+@import "../../styles/main.scss";
+
+
+.about-me {
+        grid-column: 1/-1;
+        grid-row: 1;
+        background-color: $background;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: inherit; 
+        grid-template-rows: inherit;
+   
+}
+
+.about-me-container {
+        // display: grid;
+
+        grid-column: 3/7;
+        grid-row: 1;
+        background-color: $background;
+        z-index: 2;
+   
+}
+
+
+
+// height: 100vh;
+
+
+
+.background-about{
+grid-row: 1;
+grid-column: 1/-1;
+grid-template-columns: inherit;
+display: grid;
+background-color: $secondary;
+z-index: -1;
+}

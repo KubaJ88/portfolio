@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {motion} from 'framer-motion';
+import {PortfolioContext} from '../../providers/portfolio.provider';
 import './welcome.style.scss';
+import { NavLink } from 'react-router-dom';
+
+
 
 const ease = [.6, .05, -.01, .9];
 
 const Welcome = () => {
+
+    const {togglePortfolio} = useContext(PortfolioContext)
 
     return (
         <div className="welcome">
@@ -32,8 +38,21 @@ const Welcome = () => {
             </motion.div>
 
             <div className="cta">
-                <button className="cta__portfolio">Portfolio</button>
-                <button className="cta__aboutme">About Me</button>
+
+                <button className="cta__portfolio"
+                onClick={() => togglePortfolio(true)}
+                >
+                <NavLink exact to={         
+                    '/projects'} 
+                    activeClassName='selected'>
+                        Portfolio
+                 </NavLink>
+                </button>
+                <button className="cta__aboutme"><NavLink exact to={         
+                    '/about-me'} 
+                    activeClassName='selected'>
+                        About Me
+                 </NavLink></button>
             </div>
         </div>
     )

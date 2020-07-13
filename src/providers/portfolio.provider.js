@@ -8,12 +8,18 @@ export const PortfolioContext = createContext({
     showPortfolio: false,
     togglePortfolio: () => {},
     revealProfile : {
-        show:false,
+        show:true,
         title:null,
         img: '1.png',
-        key:null
+        key:1
     }, 
-    changeProject: () => {}
+    changeProject: () => {},
+    featuredProject : {
+        show:false,        
+        img: '1.png',
+        key:null
+    },
+    setFeaturedProject: () => {}
 
 
    
@@ -23,12 +29,12 @@ export const PortfolioContext = createContext({
 
 const PortfolioProvider = ({children}) => {
     const [showPortfolio, setShowPortfolio] = useState(false)
-    const togglePortfolio = () => setShowPortfolio(!showPortfolio)
+    const togglePortfolio = (state) => setShowPortfolio(state)
     const [revealProfile, setRevealProfile] = useState({
         show:false,
         name:null,
         img:'1.png',
-        key:null
+        key:1
     })
     const changeProject = (item, state) => {
         setRevealProfile({
@@ -40,13 +46,29 @@ const PortfolioProvider = ({children}) => {
 
     }
 
+    const [featuredProject, setFeaturedProject] = useState({
+        show:false,        
+        img: '1.png',
+        key:null
+    })
+
+    const showFeatureProject = (item, state) => {
+        setFeaturedProject({
+            show:state,
+            img: item.img,
+            key: item.id
+        })
+    }
+
 
     return(
         <PortfolioContext.Provider value={{
             showPortfolio, 
             togglePortfolio,
             changeProject,
-            revealProfile
+            revealProfile,
+            showFeatureProject,
+            featuredProject
            
         }}>
             {children}

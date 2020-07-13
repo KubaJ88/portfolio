@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {motion} from 'framer-motion';
+import {PortfolioContext} from '../../providers/portfolio.provider';
 import './featured_projects.style.scss';
 import  {ReactComponent as Planet} from '../../img/planet-outline.svg';
 import  {ReactComponent as Git} from '../../img/logo-github.svg';
 import  {ReactComponent as Star} from '../../img/star-outline.svg';
 
 
+const projectList = [
+    {id:1,name: 'Bubble', img:'buble.PNG', description:'Lorem impsum dolor, sit amet .....'},
+    {id:2,name: 'Calendar', img:'react-calendar.PNG', description:'Lorem impsum dolor, sit amet .....'},
+    {id:3,name: 'FAQ Page', img:'FAQ.PNG', description:'Lorem impsum dolor, sit amet .....'}
+    
+]
 
 const ease = [.6, .05, -.01, .9];
 
@@ -39,6 +46,10 @@ const stagger = {
 
 const FeaturedProjects = () => {
 
+    const {showFeatureProject, featuredProject} = useContext(PortfolioContext)
+    
+    
+
     return( 
         <div className="featured__container">
             <h1 className="title">
@@ -54,14 +65,20 @@ const FeaturedProjects = () => {
             // }}
 
             >
+
+                {projectList.map(project => 
                 <motion.div className="project"
                variants={fadeInUp}
                whileHover={{scale:1.05, backgroundColor:'#424242', color: '#fff'}}
                whileTap={{scale:0.95}} 
+               key={project.id}
+               onHoverStart={() =>  showFeatureProject(project,true)}
+               onHoverEnd={() =>  showFeatureProject(project,false)}
+               
                 
                 >
                     <div className="project__title">
-                        Project Name
+                        {project.name}
                     </div>
                     <div className="project__description">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, dolorum?
@@ -76,37 +93,8 @@ const FeaturedProjects = () => {
                         <div className="icon"><Star/></div>
                     </div>
                 </motion.div>
-                <motion.div className="project"
-                variants={fadeInUp}
+                )}
                 
-                >
-                    <div className="project__title">
-                        Project Name-2
-                    </div>
-                    <div className="project__description">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, dolorum?
-                    </div>
-                    <div className="project__icons">
-                    <div className="icon"><Planet/></div>
-                        <div className="icon"><Git/></div>
-                        <div className="icon"><Star/></div>
-                    </div>
-                </motion.div>
-                <motion.div className="project"
-                variants={fadeInUp}
-                >
-                    <div className="project__title">
-                        Project Name-2
-                    </div>
-                    <div className="project__description">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, dolorum?
-                    </div>
-                    <div className="project__icons">
-                    <div className="icon"><Planet/></div>
-                        <div className="icon"><Git/></div>
-                        <div className="icon"><Star/></div>
-                    </div>
-                </motion.div>
             </motion.div>
             
         </div>

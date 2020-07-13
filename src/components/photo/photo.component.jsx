@@ -1,5 +1,6 @@
-import React from 'react';
-import {motion} from 'framer-motion';
+import React, {useContext} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import { PortfolioContext } from '../../providers/portfolio.provider';
 import './photo.style.scss';
 import  {ReactComponent as Triangle} from '../../img/triangle-outline.svg';
 
@@ -30,7 +31,10 @@ const stagger = {
 
 const Photo = () => {
 
+  const {featuredProject} = useContext(PortfolioContext)
+
     return (
+      <AnimatePresence>
       <motion.div className="photo"
       initial='initial'
       animate='animate'
@@ -46,7 +50,20 @@ const Photo = () => {
             staggerChildren: 0.3
         }}
         >
-        <img src={require('../../img/photo.JPG')} alt="photo" className="photo__portfolio__img"/>
+        <AnimatePresence initial={false} exitBeforeEnter>
+        <motion.img src={
+          !featuredProject.show ? require('../../img/photo.JPG') : require(`../../img/projects/${featuredProject.img}`)
+        }
+        key={featuredProject.show ? featuredProject.key : 100 }
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0   }}
+        animate={{ opacity: 1}}
+        transition={{
+            duration: .5,
+            ease: ease
+        }}
+        alt="welcome" className="photo__portfolio__img"/>
+        </AnimatePresence>
         <motion.div 
         initial={{x:-100}}
         animate={{x: '5rem', y: '3rem'}}
@@ -98,6 +115,7 @@ const Photo = () => {
         </motion.div>
 
       </motion.div>
+      </AnimatePresence>
     )
 }
 

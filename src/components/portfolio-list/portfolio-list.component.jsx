@@ -1,19 +1,25 @@
 import React, {useContext} from 'react';
 import './portfolio-list.style.scss';
-import {motion} from 'framer-motion';
+import {motion, AnimatePresence} from 'framer-motion';
 import  {ReactComponent as Planet} from '../../img/planet-outline.svg';
 import  {ReactComponent as Git} from '../../img/logo-github.svg';
 import {PortfolioContext} from '../../providers/portfolio.provider';
+import {project} from '../../data/projects'
 
 
-const projectList = [
-    {id:1,name: 'Star Wars', img:'1.png'},
-    {id:2,name: 'Calendar', img:'2.png'},
-    {id:3,name: 'FAQ Page', img:'2.png'},
-    {id:4,name: 'E-Commerce', img:'2.png'},
-    {id:5,name: 'Naturus', img:'1.png'}
+// const projectList = [
+//     {id:1,name: 'Star Wars', img:'1.png'},
+//     {id:2,name: 'Calendar', img:'react-calendar.PNG'},
+//     {id:3,name: 'FAQ Page', img:'FAQ.PNG'},
+//     {id:4,name: 'E-Commerce', img:'2.png'},
+//     {id:5,name: 'Naturus', img:'1.png'},
+//     {id:6,name: 'D3.js Bubble', img:'buble.PNG'},
+//     {id:7,name: 'FAQ Page', img:'FAQ.PNG'},
+//     {id:8,name: 'E-Commerce', img:'2.png'},
+//     {id:9,name: 'Naturus', img:'1.png'},
+//     {id:10,name: 'D3.js Bubble', img:'buble.PNG'}
 
-]
+// ]
 
 const ease = [.6, .05, -.01, .9];
 
@@ -37,9 +43,9 @@ const stagger = {
     animate: {
       transition: {
         when:'beforeChildren',
-        staggerChildren: .5,
+        staggerChildren: .2,
         ease: ease,
-        delayChildren: 1
+        delayChildren: .2
         
       }
     }
@@ -49,7 +55,16 @@ const PortfolioList = () => {
     const {changeProject} = useContext(PortfolioContext)
     
     return (
-        <div className="portfolio">
+      <AnimatePresence>
+        <motion.div className="portfolio"
+          initial={{ opacity: 0 }}
+        exit={{ opacity: 0   }}
+        animate={{ opacity: 1}}
+        transition={{
+            duration: .5,
+            ease: ease
+        }}>
+
                   <motion.div 
         // initial={{x:-100}}
         animate={{x: '1rem', y: '8rem'}}
@@ -66,13 +81,19 @@ const PortfolioList = () => {
              initial='initial'
              animate='animate'
             >
-                {projectList.map(project => (
+                {project.map(project => (
                     <motion.li key={project.id} className='portfolio__list__item'
                     variants={fadeInUp}
                     onHoverStart={() => changeProject(project,true)}
                     onHoverEnd={() => changeProject(project,false)}
+                    whileHover={{translateY: '-2px', scaleY: 1.05}}
+                    //adding seperate transition to whileHover
+                   
                     >
+                    <div className="portfolio__list__item__box">          
                     <div className="project__name">{project.name}</div>
+                    <div className="project__skill">{project.details.join(' | ')}</div>
+                    </div>
                     <motion.a target='_blank' href='https://google.com'>                    
                     <Planet className="icon"/>
                     </motion.a>     
@@ -85,7 +106,8 @@ const PortfolioList = () => {
      
                                
             </motion.ul>
-        </div>
+        </motion.div>
+        </AnimatePresence>
     )
 }
 

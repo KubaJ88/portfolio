@@ -1,17 +1,33 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './styles/main.scss';
-import Photo from './components/photo/photo.component';
-import Profile from './components/profile/profile.component';
+
+
 import Header from './components/header/header.component';
 import HomePage from './pages/home/home.page';
 import Project from './pages/projects/projects.page';
+import AboutMe from './pages/about-me/about-me.page'; 
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   return (
-    <div className="container">   
-    <HomePage/>
-    <Project/>
+    <Router>
+    <Header/>
+    <Route 
+    render={({location}) => (
+     
+    <div className="container">
+    <AnimatePresence exitBeforeEnter> 
+    <Switch location={location} key={location.pathname}>   
+    <Route exact path='/' component={HomePage}/>
+    <Route exact path='/projects' component={Project}/>       
+    <Route exact path='/about-me' component={AboutMe}/>       
+    </Switch>
+    </AnimatePresence>
     </div>
+    )}
+    />
+    </Router>
   );
 }
 

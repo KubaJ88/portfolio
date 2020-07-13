@@ -4,10 +4,13 @@ import {motion} from 'framer-motion';
 import Header from '../header/header.component';
 import Welcome from '../welcome/welcome.component';
 import FeaturedProjects from '../featured_projects/featured_projects.component';
+import { useState } from 'react';
 
 
 
 const Profile = () => { 
+
+    const [toogleProject, setToogleProject] = useState(false);
 
     return (
         <motion.div className="profile"
@@ -17,7 +20,7 @@ const Profile = () => {
             duration: 2.5
         }}
         >
-           <Header/>
+           {/* <Header/> */}
            <Welcome/>
            <FeaturedProjects/>
         </motion.div>
