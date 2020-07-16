@@ -15,10 +15,15 @@
 .about-me-container {
         // display: grid;
 
-        grid-column: 3/7;
+        grid-column: 1/-1;
         grid-row: 1;
         background-color: $background;
         z-index: 2;
+
+
+        
+
+        
    
 }
 

@@ -5,5 +5,5 @@ export const project = [
     {id:4,name: 'E-Commerce', img:'2.png', details: ['React', 'SASS', 'GSAP']},
     {id:5,name: 'Naturus', img:'1.png', details: ['SASS']},
     {id:6,name: 'D3.js Bubble', img:'buble.PNG', details: ['D3.js']}
- 
+    
 ]

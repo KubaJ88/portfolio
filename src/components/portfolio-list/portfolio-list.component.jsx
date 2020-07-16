@@ -66,11 +66,11 @@ const PortfolioList = () => {
         }}>
 
                   <motion.div 
-        // initial={{x:-100}}
-        animate={{x: '1rem', y: '8rem'}}
+        initial={{x:0, y:0}}
+        animate={{x: '1rem', y: '25rem'}}
      
         transition={{
-            duration:5,
+            duration:8,
             yoyo: Infinity,
             ease:"easeInOut"
         }}
@@ -86,7 +86,7 @@ const PortfolioList = () => {
                     variants={fadeInUp}
                     onHoverStart={() => changeProject(project,true)}
                     onHoverEnd={() => changeProject(project,false)}
-                    whileHover={{translateY: '-2px', scaleY: 1.05}}
+                    whileHover={{translateY: -4, scaleY: 1.05}}
                     //adding seperate transition to whileHover
                    
                     >
@@ -94,10 +94,10 @@ const PortfolioList = () => {
                     <div className="project__name">{project.name}</div>
                     <div className="project__skill">{project.details.join(' | ')}</div>
                     </div>
-                    <motion.a target='_blank' href='https://google.com'>                    
+                    <motion.a target='_blank' href={project.url}>                    
                     <Planet className="icon"/>
                     </motion.a>     
-                    <motion.a target='_blank' href='https://google.com'>       
+                    <motion.a target='_blank' href={project.git}>       
                     <Git className="icon"/>                  
                     </motion.a>         
                     </motion.li>

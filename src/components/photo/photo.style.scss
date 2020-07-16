@@ -3,18 +3,47 @@
 .photo {
     // background-color: grey;      
     grid-column: 1/5;
-    margin: 5.0rem 8.8rem auto 8.8rem;
+    justify-self: center;
+    
+    // margin: 8.8rem 8.8rem auto 8.8rem;
     grid-row: 1;
     position: relative;
+    // margin-left: 8.8rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin-left: 4rem;
+  }
+
+    @media only screen and (max-width: $bp-largest) {
+       grid-column: 1/4;
+    //    opacity: 0.5;
+    //    mix-blend-mode: difference;
+    //    z-index: -1;
+        }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 1/-1;
+        opacity: .1;           
+        z-index: -1;
+        
+        
+          }
+
 
 
     &__portfolio {
-        max-width: 78.4rem;
-        max-height: 78.4rem; 
+        max-width: 64.0rem;
+        max-height: 64.0rem;
+        width: 100%;
+        height: 100%; 
+        // background-color: springgreen;
+        
         // overflow: hidden;
         // margin: 10.2rem 8.8rem 19.4rem 8.8rem;
         // position: relative;
-        
+
+       
+
         
 
 
@@ -23,6 +52,7 @@
             width: 100%;
             object-fit: contain;
             border-radius: 50%;   
+            
             // animation: cameraPan 10s linear infinite;
                  
         }
@@ -30,6 +60,7 @@
 
         &__circle { 
             position: absolute;
+            // transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             
 
             &--1 {
@@ -41,6 +72,11 @@
             border: 3px solid $primary;
             border-radius: 50%;
 
+            @media only screen and (max-width: $bp-large) {
+              height: 8rem;
+              width: 8rem;
+            }
+
             }
             &--2 {
             bottom: 5rem;
@@ -51,12 +87,23 @@
             border: 3px solid $secondary;
             border-radius: 50%;
 
+            @media only screen and (max-width: $bp-large) {
+                height: 5rem;
+                width: 5rem;
+              }
+  
+
             }
             &--3 {
             bottom: 1rem;
             left: 2rem;            
             height: 10rem;
             width: 10rem;
+
+            @media only screen and (max-width: $bp-large) {
+                height: 5rem;
+                width: 5rem;
+              }
            
 
             svg.triangle-icon  {
@@ -75,6 +122,11 @@
             right: 5rem;
             height:8rem;
             width: 8rem;
+
+            @media only screen and (max-width: $bp-large) {
+                height: 5rem;
+                width: 5rem;
+              }
             
 
             svg.triangle-icon  {

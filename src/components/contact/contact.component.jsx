@@ -1,12 +1,13 @@
 import React from 'react';
 import './contact.styles.scss';
-import  {ReactComponent as Planet} from '../../img/planet-outline.svg';
+import  {ReactComponent as LinkedIn} from '../../img/logo-linkedin.svg';
 import  {ReactComponent as Git} from '../../img/logo-github.svg';
-import  {ReactComponent as Star} from '../../img/star-outline.svg';
+import  {ReactComponent as Twitter} from '../../img/logo-twitter.svg';
+import  {ReactComponent as Chart} from '../../img/stats-chart-outline.svg';
 import {motion, AnimatePresence} from 'framer-motion';
 
 const transition = {
-    duration: 1.4, ease:[.6,.01,-.05,.9]
+    duration: 1.6, ease:[0.25, 0.46, 0.45, 0.94]
 }   
 //   const stagger ={
 //     initial: {
@@ -69,18 +70,29 @@ const Contact = () => {
            </motion.div>
            <motion.button className="cta-contact"          
             variants={header}
-            whileHover={{scale:1.1}}
+            whileHover={{scale:1.1, translateY: -4}}
            >
                <a href="mailto:jarosk88@gmail.com">Get In Touch</a>
            </motion.button>
            <motion.div className="contact__icons">
-           <motion.div
-                        whileHover={{scale:1.1, color: '#ffd700'}}
-                        className="icon"><Planet alt='planet'/></motion.div>
-                        <motion.div className="icon"
-                        whileHover={{scale:1.1, fill: '#ffd700'}}
-                        ><Git/></motion.div>
-                        <div className="icon"><Star/></div>
+           <motion.div className="icon">
+                <a href="https://github.com/KubaJ88" target="_blank" rel="noopener noreferrer">
+                <Git/></a></motion.div>
+               <motion.div
+               
+               className="icon">
+                 
+                 <a href="https://www.linkedin.com/in/jakub-jaros-6a9a6b81/" target="_blank" rel="noopener noreferrer">
+                <LinkedIn alt='linkedin'/></a></motion.div>
+               <motion.div className="icon"
+              
+               ><a href="https://twitter.com/jarosk88" target="_blank" rel="noopener noreferrer"><Twitter/></a></motion.div>
+
+               <motion.div className="icon"
+               
+               ><a href="https://public.tableau.com/profile/jakub.jaros#!/" target="_blank" rel="noopener noreferrer"><Chart/></a></motion.div>
+                        
+                       
            </motion.div>
        </motion.div>
      

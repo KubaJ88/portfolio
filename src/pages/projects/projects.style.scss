@@ -4,11 +4,14 @@
 .project__list {
     grid-row: 1;
     grid-column: 1/-1;
+    // align-items: center;
     grid-template-columns: inherit;
     grid-template-rows: inherit;
     display: grid;
     background-color: $background;
     z-index: 2;
+    justify-items: center;    
+    // align-items: center;
     // height: 100vh;
     
 }

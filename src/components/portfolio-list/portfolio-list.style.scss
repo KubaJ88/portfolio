@@ -4,14 +4,52 @@
     grid-row: 1;
     grid-column: 1/5;
     // background-color: rosybrown;
-    margin: 8.8rem 24rem auto 16rem;
+    margin: 0 24rem auto 16rem;
+    
+
+    @media only screen and (max-width: $bp-small) {
+        // 
+        grid-column: 1/-1;
+        margin: 0;
+
+        }
+   
 
     &__list {
         width: 50.4rem;
+        // width: 125%;
         text-decoration: none;
         text-transform: uppercase;
         display: inline-block;
         list-style: none;
+
+        @media only screen and (max-width: $bp-largest) {
+            width: 40rem;
+            
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            display: flex;            
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 0;
+            justify-content: space-around;
+            // display: grid;
+            // grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+            // column-gap: .5rem;
+            // width: 100%;
+            // justify-items: stretch;
+            // align-items: stretch;
+            // justify-self: stretch;
+            // align-self: stretch;
+
+
+            
+    
+            }
+     
+     
 
         a {
             &,
@@ -27,10 +65,16 @@
                 color: currentColor;
                 transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
                 opacity: 0;
+
+                @media only screen and (max-width: $bp-largest) {
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    
+                }
             }
 
             &:hover {
-                color: $primary;
+                color: $secondary;
                 transform: scale(1.5);
             }
         }
@@ -50,8 +94,21 @@
             color: white;
             border-radius: 5px;
             box-shadow: 0 0 2rem rgba(black, 0.5);
-            transition: padding-left .8s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.3s ;
+            transition: padding-left .4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s ;
             position: relative;
+
+            @media only screen and (max-width: $bp-small) {
+                width: 45%;
+                // margin-right: 3rem;
+                // margin-left: 3rem;
+                min-width: 30rem;
+            
+    
+                
+        
+                }
+
+           
 
             // &::before {
             //     content: '';
@@ -71,9 +128,9 @@
 
 
             &:hover {
-                padding-left: 2.5rem;
+                padding-left: 1.6rem;
                 background-color: $third;
-                transform: scale(1.5);
+                transform: scaleY(1.5);
 
                
 
@@ -105,13 +162,20 @@
             }
 
             .project__name {
-                font-size: 3.6rem;
+                font-size: 3.3rem;
                 margin-bottom: .8rem;
+
+                @media only screen and (max-width: $bp-largest) {
+                    font-size: 2rem;
+                    
+                    // line-height: 3.3rem;
+                }
             }
 
             .project__skill{
                 font-size: 1.3rem;
                 font-weight: 300;
+                // line-height: 1.769;
             }
 
             .icon {
@@ -134,14 +198,14 @@
 
 .project__circle {
     position: absolute;
-    top: 18rem;
+    // top: 18rem;
     left: 4rem;
-    height: 10rem;
-    width: 10rem;
+    height: 8rem;
+    width: 8rem;
     // background-color: pink;
     border: 3px solid $third;
     border-radius: 50%;
-    transition: background-color .8s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    // transition: background-color .8s cubic-bezier(0.95, 0.05, 0.795, 0.035);
     // z-index: 2;
 
    

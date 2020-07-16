@@ -1,9 +1,16 @@
 @import "../../styles/main.scss";
 
 .welcome {
-    margin-top: 8.8rem;
+    // margin-top: 8.8rem;
     text-transform: uppercase;
     line-height: 1;
+
+
+    // @media only screen and (max-width: $bp-medium) {
+    //     grid-column: 4/-1;
+    //     grid-row: 1;
+        
+    //   }
 
     &__hello {
         font-size: 8.8rem;
@@ -36,7 +43,7 @@
         // display: inline;
         .color-line {
         position: absolute;
-        bottom: 1rem;
+        bottom: .8rem;
         left: 0;
         width: 56rem;
         height: 1rem;
@@ -57,13 +64,13 @@
 
     .cta {
         font-style: inherit;
-        margin-top: 4.8rem;
+        margin-top: 6.4rem;
         
         
         &__portfolio {
             font-size: 1.6rem;
             font-weight: 500;
-            margin-right: 3.2rem;
+            margin-right: 4rem;
             // padding: 5rem 20rem;
             height: 4.8rem;
             width: 20rem;
@@ -88,7 +95,8 @@
         }
         &__aboutme {
             font-weight: 500;
-            margin-right: 3.2rem;
+            // margin-right: 3.2rem;
+            font-size: 1.3rem;
             // padding: 5rem 20rem;
             height: 4.8rem;
             width: 20rem;

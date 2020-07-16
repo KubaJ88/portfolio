@@ -5,6 +5,13 @@ $secondary: #ffd700;
 $third: #FF007D;
 $boxes: #212121;
 
+
+$bp-largest: 87.5em; //1400
+$bp-large: 81.25em; //1300
+$bp-medium: 64.0em; //1000
+$bp-small: 46.875em; // 750
+$bp-smallest: 31.25em;
+
 *,
 *::before,
 *::after {
@@ -16,6 +23,12 @@ $boxes: #212121;
 html {
     box-sizing: border-box;
     font-size: 62.5%;    
+
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 50%;
+        
+      }
 }
 
 body {
@@ -31,6 +44,11 @@ body {
     display: grid;
     // grid-template-rows: 100vh;
     grid-template-columns: [center-start] repeat(8,[col-start] minmax(min-content,1fr) [col-end]) [center-end] ;
+    // align-items: center;
+    // justify-items: center;
+    grid-template-rows: auto;
+    margin: auto;
+    // max-width: 150rem;
 
 
   

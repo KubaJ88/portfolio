@@ -8,9 +8,9 @@ import  {ReactComponent as Star} from '../../img/star-outline.svg';
 
 
 const projectList = [
-    {id:1,name: 'Bubble', img:'buble.PNG', description:'Lorem impsum dolor, sit amet .....'},
-    {id:2,name: 'Calendar', img:'react-calendar.PNG', description:'Lorem impsum dolor, sit amet .....'},
-    {id:3,name: 'FAQ Page', img:'FAQ.PNG', description:'Lorem impsum dolor, sit amet .....'}
+    {id:1,name: 'Online Shop', img:'ecommerce.png', description:'Lorem impsum dolor, sit amet .....'},
+    {id:2,name: 'Calendar', img:'react-calendar_main.png', description:'Lorem impsum dolor, sit amet .....'},
+    {id:3,name: 'FAQ Page', img:'FAQ_main.png', description:'Lorem impsum dolor, sit amet .....'}
     
 ]
 
@@ -38,7 +38,7 @@ const stagger = {
         when:'beforeChildren',
         staggerChildren: .5,
         ease: ease,
-        delayChildren: 3.0
+        delayChildren: 1.0
         
       }
     }
@@ -81,7 +81,7 @@ const FeaturedProjects = () => {
                         {project.name}
                     </div>
                     <div className="project__description">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, dolorum?
+                        REACT | SASS | D3.JS
                     </div>
                     <div className="project__icons">
                         <motion.div

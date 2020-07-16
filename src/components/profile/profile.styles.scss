@@ -1,6 +1,31 @@
+@import "../../styles/main.scss";
+
+
 .profile {
     grid-column: 5/-1;
-    height: 100px;
+    // height: 100px;
+    grid-row: 1;
+    // display: grid;
+
+    
+    @media only screen and (max-width: $bp-largest) {
+        grid-column: 4/-1;
+        // justify-self: center;
+        margin-left: 2.4rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 1/-1;
+        justify-self: center;
+        margin: auto;
+       
+          }
+
+    // @media only screen and (max-width: $bp-medium) {
+    //     grid-column: 1/-1;
+    //     display: grid;
+    //     grid-template-columns: inherit;
+    //   }
     
     
     

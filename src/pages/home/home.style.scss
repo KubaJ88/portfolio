@@ -1,8 +1,12 @@
 .homepage {
     grid-row: 1;
     grid-column: 1/-1;
+    
     grid-template-columns: inherit;
     display: grid;
+    // justify-items: center;
+    align-items:center;
+    
     // display: none;
     // overflow: hidden;
 }

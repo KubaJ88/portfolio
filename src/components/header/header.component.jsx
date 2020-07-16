@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import './header.styles.scss';
 import {PortfolioContext} from '../../providers/portfolio.provider';
 import { useEffect } from 'react';
-import  {ReactComponent as Planet} from '../../img/planet-outline.svg';
+import  {ReactComponent as LinkedIn} from '../../img/logo-linkedin.svg';
 import  {ReactComponent as Git} from '../../img/logo-github.svg';
-import  {ReactComponent as Star} from '../../img/star-outline.svg';
+import  {ReactComponent as Twitter} from '../../img/logo-twitter.svg';
+import  {ReactComponent as Chart} from '../../img/stats-chart-outline.svg';
 
 import {motion, AnimatePresence} from 'framer-motion';
 import { NavLink } from 'react-router-dom';
@@ -116,13 +117,24 @@ const Header = () => {
             <motion.nav className='header__nav'
             >
             <div className="header__icons">
-            <motion.div
-                        whileHover={{scale:1.1, color: '#ffd700'}}
-                        className="icon"><Planet alt='planet'/></motion.div>
-                        <motion.div className="icon"
-                        whileHover={{scale:1.1, fill: '#ffd700'}}
-                        ><Git/></motion.div>
-                        <div className="icon"><Star/></div>
+                
+                <motion.div className="icon">
+                <a href="https://github.com/KubaJ88" target="_blank" rel="noopener noreferrer">
+                <Git/></a></motion.div>
+               <motion.div
+               
+               className="icon">
+                 
+                 <a href="https://www.linkedin.com/in/jakub-jaros-6a9a6b81/" target="_blank" rel="noopener noreferrer">
+                <LinkedIn alt='linkedin'/></a></motion.div>
+               <motion.div className="icon"
+              
+               ><a href="https://twitter.com/jarosk88" target="_blank" rel="noopener noreferrer"><Twitter/></a></motion.div>
+
+               <motion.div className="icon"
+               
+               ><a href="https://public.tableau.com/profile/jakub.jaros#!/" target="_blank" rel="noopener noreferrer"><Chart/></a></motion.div>
+               
             </div>
             <motion.div className="header__nav__links"
             variants={stagger}

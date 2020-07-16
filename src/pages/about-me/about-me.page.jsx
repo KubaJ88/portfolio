@@ -14,19 +14,21 @@ const AboutMe = () => {
     const variants = {
         hidden: {
             y: '-100%',
-            transformOrigin: 'right top',            
+            transformOrigin: 'right top',
+            opacity:0,            
             transition: {
-                duration: .8,
+                duration: .9,
                 delay: 0.2,                       
-                ease: [.6, .05, -.01, .9],
+                ease: [0.25, 0.46, 0.45, 0.94],
             }
         },
         show: {
-            y:0,            
+            y:0,
+            opacity:1,            
             transition: {
                 duration: .7,
                 // delay: 0.2,                       
-                ease: [.6, .05, -.01, .9],
+                ease: [0.25, 0.46, 0.45, 0.94],
             }
         },
         
@@ -50,12 +52,13 @@ const AboutMe = () => {
         // exit={{opacity:0}}
         initial={{ y: '-100%', transformOrigin: 'right top',
         skewY: 2 }}
-                        exit={{ y: '-100%', opacity:0 }}
+                        exit={{ y: '-100%', skewY:-2
+                        }}
                         animate={{ y: aboutMatch.isExact ? 0 : '-100%', skewY: 0}}
                         transition={{
                             duration: .8 ,
-                            delay: aboutMatch.isExact ? 0.05 : 0.1,
-                            ease: [.6, .05, -.01, .9]
+                            delay: aboutMatch.isExact ? 0.05 : 0,
+                            ease: [0.25, 0.46, 0.45, 0.94]
                         }}
         >
         <motion.div className="about-me-container"

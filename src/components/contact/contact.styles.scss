@@ -3,16 +3,24 @@
 .contact { 
     display: flex;
     flex-direction: column;
+    
     align-items: center;
-    margin-top: 12rem;
+
+    
+    // margin-top: 12rem;
     // margin-bottom: 12rem;
 
     &__title {
-        font-size: 14.4rem;
+        font-size: 8.8rem;
         font-weight: 900;
         margin-bottom: 8rem;
         text-shadow: 0 6px 5px black;
         position: relative;
+
+        @media only screen and (max-width: $bp-largest) {
+            font-size: 6.4rem;          
+           
+        }
 
         &::before {
             content: '';
@@ -28,11 +36,21 @@
 
     }
             &__text {
-                font-size: 2.4rem;
+                font-size: 2.6rem;
                 font-weight: 300;
                 line-height: 1.6;
                 text-align: center;
-                margin-bottom: 5.6rem;
+                margin-bottom: 6.4rem;
+                width: 70%;
+
+                @media only screen and (max-width: $bp-largest) {
+                    font-size: 2.0rem;          
+                   
+                }
+
+                &::selection {
+                    background: $secondary;
+            }
             }
 
             .cta-contact {
@@ -43,13 +61,22 @@
                 font-size: 1.6rem;
                 font-weight: 700;
                 border-radius: 4px;
+                transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+                // &:hover {
+                //     transform: scale(1.2);
+                // }
+
+
 
                 a,&:visited {
                     text-decoration: none;
                     color: currentColor;
                     
                 }
+                
 
+                
 
                 
 
@@ -59,12 +86,12 @@
 
             &__icons {
                 display: flex;
-                width: 100%;
+                width: 50%;
                 justify-content: space-evenly;
-                margin-top: 6.4rem;
+                margin-top: 8.8rem;
                
                 // margin-left: 8.8rem;
-                opacity: 0.5;
+                // opacity: 0.5;
     
             .icon {
                 width: 4rem;
@@ -72,14 +99,31 @@
                 // margin-right: 2.4rem;
                 color: currentColor;
                 fill: currentColor;
-    
-                &:last-child {
-                    // margin-right: auto;
-                    // margin-right: 0;
-                    color: $primary; 
-                    
+                transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                opacity: 0.5;
+
+                @media only screen and (max-width: $bp-largest) {
+                    width: 3.2rem;
+                    height: 3.2rem;          
+                   
+                }
+                
+
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.2);
+                    color: $secondary;
+                }
+                
+                a {
+                    display: inline-block;
+                    fill: currentColor;
+                    text-decoration: none;
+                    color: inherit;
                     
                 }
+    
+        
                 
                 svg {
                     width: 100%;

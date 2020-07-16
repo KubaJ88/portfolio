@@ -3,15 +3,35 @@
 .featured__container {
     display: flex;
     flex-direction: column;
-    margin-top: 8rem;
+    margin-top: 10.4rem;
     margin-right: 8.8rem;
+
+    // @media only screen and (max-width: $bp-medium) {
+    //     grid-column: 1/-1;
+    //     grid-row: 2;
+    //     // justify-items: center;
+    //     // align-items: stretch;
+    //     // margin: auto 0;
+    //     margin-top: 20.0rem;
+        
+    //   }
+
+    @media only screen and (max-width: $bp-small) {
+        // 
+
+        margin: auto;
+        margin-top: 8.8rem;
+
+        }
+   
     
 
     .title { 
-        font-size: 3.2rem;
+        font-size: 2.6rem;
         text-transform: uppercase;
         font-weight: 700;
-        margin-bottom: 4rem;
+        margin-bottom: 2.4rem;
+        line-height: 1.615;
     }
 
 
@@ -24,24 +44,48 @@
         
         
         .project {
-            width: 28rem;
-            height: 20rem;
+            // min-width: 20rem;
+            width: 100%;
+            // height: 20rem;
             background-color: #212121;
             box-shadow: 0 0 3px #212121;
             padding: 2.4rem 1.6rem 1.6rem 2.4rem;
             color: rgba(white, $alpha: .8);
+            &:not(:last-child) {
+                margin-right: 4rem;
+                }
+           
+
+            @media only screen and (max-width: $bp-largest) {
+
+                
+                &:not(:last-child) {
+                margin-right: 2.4rem;
+                }
+                padding: 1.6rem 0.8rem 1.6rem 1.6rem;
+            }
             
            
 
 
             &__title {
-                margin-bottom: 2.4rem;
-                font-size: 2.4rem;
+                // margin-bottom: 1.6rem;
+                font-size: 2rem;
+                font-weight: 700;
+                text-transform: uppercase;
                 color: currentColor;
+                line-height: 1.65;
+
+                @media only screen and (max-width: $bp-largest) {
+                   font-size: 1.6rem;
+                   line-height: 1.688;
+                }
             }
             &__description {
                 // margin-left: 2.4rem;
-                font-size: 1.6rem;
+                font-size: 1.3rem;
+                line-height: 1.65;
+                
                 color: currentColor;
                 font-weight: 300;
             }
@@ -49,7 +93,12 @@
 
             &__icons {
                 display: flex;
-                margin-top: 1.6rem;
+                margin-top: 2.4rem;
+
+                @media only screen and (max-width: $bp-largest) {
+                  margin-top: 1.6rem;
+                 }
+                
                 // color: white;
                 
 
@@ -59,6 +108,11 @@
                     margin-right: 2.4rem;
                     color: currentColor;
                     fill: currentColor;
+
+                    @media only screen and (max-width: $bp-largest) {
+                       height: 1.6rem;
+                       width: 1.6rem;
+                    }
 
                     &:last-child {
                         margin-left: auto;
