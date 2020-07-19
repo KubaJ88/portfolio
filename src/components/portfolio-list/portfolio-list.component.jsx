@@ -94,12 +94,13 @@ const PortfolioList = () => {
                     <div className="project__name">{project.name}</div>
                     <div className="project__skill">{project.details.join(' | ')}</div>
                     </div>
-                    <motion.a target='_blank' href={project.url}>                    
+                    {project.url && <a target='_blank' href={project.url}>                    
                     <Planet className="icon"/>
-                    </motion.a>     
-                    <motion.a target='_blank' href={project.git}>       
+                    </a> }
+                    { project.git && 
+                    <a target='_blank' href={project.git}>       
                     <Git className="icon"/>                  
-                    </motion.a>         
+                    </a> }
                     </motion.li>
                 ))}
                 

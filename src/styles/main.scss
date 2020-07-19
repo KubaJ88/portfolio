@@ -46,7 +46,7 @@ body {
     grid-template-columns: [center-start] repeat(8,[col-start] minmax(min-content,1fr) [col-end]) [center-end] ;
     // align-items: center;
     // justify-items: center;
-    grid-template-rows: auto;
+    grid-template-rows: min-content;
     margin: auto;
     // max-width: 150rem;
 
@@ -63,3 +63,7 @@ button {
     font-family: inherit;      
 
     }
+
+svg{
+    pointer-events: none;
+}

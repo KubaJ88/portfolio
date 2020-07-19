@@ -8,9 +8,15 @@ import  {ReactComponent as Star} from '../../img/star-outline.svg';
 
 
 const projectList = [
-    {id:1,name: 'Online Shop', img:'ecommerce.png', description:'Lorem impsum dolor, sit amet .....'},
-    {id:2,name: 'Calendar', img:'react-calendar_main.png', description:'Lorem impsum dolor, sit amet .....'},
-    {id:3,name: 'FAQ Page', img:'FAQ_main.png', description:'Lorem impsum dolor, sit amet .....'}
+    {id:1,name: 'Online Shop', img:'ecommerce.png',  url:'https://kuba88-shop.herokuapp.com/', 
+    git:'https://github.com/KubaJ88/react-e-commerce',
+    details: ['React', 'Redux','Firebase']},
+    {id:2,name: 'Calendar', img:'react-calendar_main.png',   url:'https://kubaj88.github.io/react-calendar/', 
+    git:'https://github.com/KubaJ88/react-calendar', 
+    details: ['React', 'SASS', 'date-fns']},
+    {id:3,name: 'FAQ Page', img:'FAQ_main.png', url:'https://kubaj88.github.io/react-faq-page/', 
+    git:'https://github.com/KubaJ88/react-faq-page',
+    details: ['React', 'SASS']}
     
 ]
 
@@ -81,16 +87,25 @@ const FeaturedProjects = () => {
                         {project.name}
                     </div>
                     <div className="project__description">
-                        REACT | SASS | D3.JS
+                       {project.details.join(' | ')}
                     </div>
                     <div className="project__icons">
-                        <motion.div
-                        whileHover={{scale:1.1, color: '#ffd700'}}
-                        className="icon"><Planet alt='planet'/></motion.div>
-                        <motion.div className="icon"
-                        whileHover={{scale:1.1, fill: '#ffd700'}}
-                        ><Git/></motion.div>
-                        <div className="icon"><Star/></div>
+                        
+                        
+                        
+                        {project.url && <a target='_blank' href={project.url}>                    
+                        <Planet className='icon'/>
+                        </a> } 
+                        
+                        
+
+                  { project.git && 
+                    <a target='_blank' href={project.git}>       
+                    <Git className='icon'/>                  
+                    </a> }
+                      
+
+                      {/* <a><Star className="icon"/></a> */}
                     </div>
                 </motion.div>
                 )}

@@ -59,7 +59,8 @@ const Photo = () => {
         exit={{ opacity: 0   }}
         animate={{ opacity: 1}}
         transition={{
-            duration: .5,
+            duration: 1,
+            delay: .5,
             ease: ease
         }}
         alt="welcome" className="photo__portfolio__img"/>

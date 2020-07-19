@@ -95,13 +95,46 @@
                 display: flex;
                 margin-top: 2.4rem;
 
+                // &:last-child {
+                //     margin-left: auto;
+                //     margin-right: 0;
+                //     color: $primary; 
+                    
+                    
+                // }
+
+
                 @media only screen and (max-width: $bp-largest) {
                   margin-top: 1.6rem;
                  }
                 
                 // color: white;
                 
+                a {
+                    &,
+                    &:link,
+                    &:visited {
+                        cursor: pointer;
+                        text-decoration: none;
+                        height: 2.4rem;
+                        width: 2.4rem;
+                        outline: none;
+                        position: relative;
+                        margin-right: 2.4rem;
+                        color: white;
+                        transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                        opacity: 1;
+                       
+                      
+                    }
 
+
+                    &:hover { 
+                        color: $primary;
+                        transform: scale(1.1);
+                        
+                    }
+                
                 .icon {
                     width: 2.4rem;
                     height: 2.4rem;
@@ -109,18 +142,16 @@
                     color: currentColor;
                     fill: currentColor;
 
+
+              
+                    
+
                     @media only screen and (max-width: $bp-largest) {
                        height: 1.6rem;
                        width: 1.6rem;
                     }
 
-                    &:last-child {
-                        margin-left: auto;
-                        margin-right: 0;
-                        color: $primary; 
-                        
-                        
-                    }
+                
                     
                     svg {
                         width: 100%;
@@ -129,6 +160,7 @@
                     }
 
                 }
+            }
                 
             }
         }

@@ -71,8 +71,7 @@ const Description = () => {
             
             
             <div className="desc__details">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, eaque.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, eaque.
+               {revealProfile.desc}
             </div>
             
             </>

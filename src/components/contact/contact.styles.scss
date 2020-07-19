@@ -88,7 +88,7 @@
                 display: flex;
                 width: 50%;
                 justify-content: space-evenly;
-                margin-top: 8.8rem;
+                margin: 8.8rem 0;
                
                 // margin-left: 8.8rem;
                 // opacity: 0.5;
@@ -101,6 +101,7 @@
                 fill: currentColor;
                 transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 opacity: 0.5;
+                
 
                 @media only screen and (max-width: $bp-largest) {
                     width: 3.2rem;

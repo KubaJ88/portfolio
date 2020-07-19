@@ -17,7 +17,8 @@ export const PortfolioContext = createContext({
     featuredProject : {
         show:false,        
         img: '1.png',
-        key:null
+        key:null,
+        desc: null
     },
     setFeaturedProject: () => {}
 
@@ -41,7 +42,8 @@ const PortfolioProvider = ({children}) => {
             show: state,
             name: item.name,
             img: item.img,
-            key: item.id
+            key: item.id,
+            desc: item.desc
         })
 
     }

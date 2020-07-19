@@ -39,20 +39,22 @@ const Welcome = () => {
 
             <div className="cta">
 
-                <button className="cta__portfolio"
-                onClick={() => togglePortfolio(true)}
-                >
+                
+                
                 <NavLink exact to={         
                     '/projects'} 
                     activeClassName='selected'>
+                    <button className="cta__portfolio">
                         Portfolio
-                 </NavLink>
                 </button>
-                <button className="cta__aboutme"><NavLink exact to={         
-                    '/about-me'} 
+                 </NavLink>
+                    <NavLink exact to={         
+                        '/about-me'} 
                     activeClassName='selected'>
+                        <button className="cta__aboutme">
                         About Me
-                 </NavLink></button>
+                 </button>
+                 </NavLink>
             </div>
         </div>
     )
