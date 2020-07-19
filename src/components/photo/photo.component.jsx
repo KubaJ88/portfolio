@@ -21,13 +21,7 @@ const showPhoto = {
     }
 }
 
-const stagger = {
-    animate: {
-      transition: {
-        staggerChildren: .2
-      }
-    }
-  }
+
 
 const Photo = () => {
 

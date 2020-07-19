@@ -1,7 +1,7 @@
 import React from 'react';
 import Contact from '../../components/contact/contact.component';
 import './about-me.style.scss';
-import {motion, AnimatePresence} from 'framer-motion';
+import {motion} from 'framer-motion';
 import {useRouteMatch} from 'react-router-dom'
 
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './projects.style.scss';
 import PortfolioList from '../../components/portfolio-list/portfolio-list.component';
 import Description from '../../components/description/description.component';
@@ -7,7 +7,7 @@ import Description from '../../components/description/description.component';
 // import { useContext } from 'react';
 
 import {motion} from 'framer-motion';
-import { useLocation, useRouteMatch } from 'react-router-dom';
+import { useRouteMatch } from 'react-router-dom';
 
 const Project = () => {
 

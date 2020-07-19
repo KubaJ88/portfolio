@@ -4,7 +4,7 @@ import  {ReactComponent as LinkedIn} from '../../img/logo-linkedin.svg';
 import  {ReactComponent as Git} from '../../img/logo-github.svg';
 import  {ReactComponent as Twitter} from '../../img/logo-twitter.svg';
 import  {ReactComponent as Chart} from '../../img/stats-chart-outline.svg';
-import {motion, AnimatePresence} from 'framer-motion';
+import {motion} from 'framer-motion';
 
 const transition = {
     duration: 1.6, ease:[0.25, 0.46, 0.45, 0.94]

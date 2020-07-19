@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './header.styles.scss';
-import {PortfolioContext} from '../../providers/portfolio.provider';
-import { useEffect } from 'react';
+
 import  {ReactComponent as LinkedIn} from '../../img/logo-linkedin.svg';
 import  {ReactComponent as Git} from '../../img/logo-github.svg';
 import  {ReactComponent as Twitter} from '../../img/logo-twitter.svg';

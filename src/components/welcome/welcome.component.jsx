@@ -1,6 +1,5 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {motion} from 'framer-motion';
-import {PortfolioContext} from '../../providers/portfolio.provider';
 import './welcome.style.scss';
 import { NavLink } from 'react-router-dom';
 
@@ -10,7 +9,7 @@ const ease = [.6, .05, -.01, .9];
 
 const Welcome = () => {
 
-    const {togglePortfolio} = useContext(PortfolioContext)
+  
 
     return (
         <div className="welcome">

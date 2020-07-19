@@ -4,7 +4,7 @@ import {PortfolioContext} from '../../providers/portfolio.provider';
 import './featured_projects.style.scss';
 import  {ReactComponent as Planet} from '../../img/planet-outline.svg';
 import  {ReactComponent as Git} from '../../img/logo-github.svg';
-import  {ReactComponent as Star} from '../../img/star-outline.svg';
+// import  {ReactComponent as Star} from '../../img/star-outline.svg';
 
 
 const projectList = [
@@ -52,7 +52,7 @@ const stagger = {
 
 const FeaturedProjects = () => {
 
-    const {showFeatureProject, featuredProject} = useContext(PortfolioContext)
+    const {showFeatureProject} = useContext(PortfolioContext)
     
     
 
@@ -93,14 +93,14 @@ const FeaturedProjects = () => {
                         
                         
                         
-                        {project.url && <a target='_blank' href={project.url}>                    
+                        {project.url && <a target='_blank' rel="noopener noreferrer" href={project.url}>                    
                         <Planet className='icon'/>
                         </a> } 
                         
                         
 
                   { project.git && 
-                    <a target='_blank' href={project.git}>       
+                    <a target='_blank' rel="noopener noreferrer" href={project.git}>       
                     <Git className='icon'/>                  
                     </a> }
                       
